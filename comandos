@@ -1,0 +1,18 @@
+como usar o comando brightnessctl -l e brightnessctl --device='input5::scrolllock' set 1:
+ Abra o terminal: Você pode fazer isso pressionando Ctrl + Alt + T no seu teclado.
+Verifique se o pacote brightnessctl está instalado: Você pode fazer isso com o seguinte comando:
+       $ brightnessctl --version
+       Se o comando retornar a versão do brightnessctl, isso significa que o pacote está instalado. Se não, você verá uma mensagem de erro.
+Instale o pacote brightnessctl (se necessário): Se o pacote brightnessctl não estiver instalado, você pode instalá-lo com os seguintes comandos:
+       $ sudo apt-get update
+       $ sudo apt-get install brightnessctl
+       Agora, se você executar brightnessctl --version, deverá ver a versão do pacote.
+Liste todos os dispositivos de brilho disponíveis: Agora você pode usar o comando brightnessctl -l para listar todos os dispositivos de brilho disponíveis:
+       $ brightnessctl -l
+       Este comando deve retornar uma lista de todos os dispositivos de brilho disponíveis no seu sistema.
+Ajuste o brilho da tecla Scroll Lock: Agora você pode usar o comando brightnessctl para ajustar o brilho da tecla Scroll Lock:
+       $ sudo brightnessctl --device='input5::scrolllock' set 1
+       Este comando deve definir o brilho da tecla Scroll Lock para 1 (100%).
+ Verifique o brilho atual: Você pode verificar o brilho atual da tecla Scroll Lock com o seguinte comando:
+       $ cat /sys/class/leds/input5::scrolllock/brightness
+       
